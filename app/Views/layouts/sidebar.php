@@ -28,6 +28,12 @@
                         <p>Brand</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?= url_to('machine') ?>" class="nav-link">
+                        <i class="fas fa-cubes nav-icon"></i>
+                        <p>Machine</p>
+                    </a>
+                </li>
 
             </ul>
         </nav>

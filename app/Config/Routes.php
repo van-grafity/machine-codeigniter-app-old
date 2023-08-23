@@ -41,6 +41,14 @@ $routes->get('/brand/create', 'BrandController::create',['as' => 'brand-create']
 $routes->post('/brand/store', 'BrandController::store',['as' => 'brand-store']);
 $routes->post('/brand/update', 'BrandController::update',['as' => 'brand-update']);
 
+
+$routes->get('/machine', 'MachineController::index',['as' => 'machine']);
+$routes->get('/machine/edit/(:num)', 'MachineController::edit/$1',['as' => 'machine-edit']);
+$routes->get('/machine/delete/(:num)', 'MachineController::delete/$1',['as' => 'machine-delete']);
+$routes->get('/machine/create', 'MachineController::create',['as' => 'machine-create']);
+$routes->post('/machine/store', 'MachineController::store',['as' => 'machine-store']);
+$routes->post('/machine/update', 'MachineController::update',['as' => 'machine-update']);
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
