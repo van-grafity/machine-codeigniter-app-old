@@ -22,7 +22,13 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                
+                <li class="nav-item">
+                    <a href="<?= url_to('brand') ?>" class="nav-link">
+                        <i class="fas fa-cube nav-icon"></i>
+                        <p>Brand</p>
+                    </a>
+                </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
