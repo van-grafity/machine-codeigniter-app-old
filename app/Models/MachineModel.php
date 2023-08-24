@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class MachineModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'machine';
+    protected $table            = 'machines';
     protected $primarykey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
