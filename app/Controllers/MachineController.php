@@ -22,8 +22,8 @@ class MachineController extends BaseController
         $data = [
             'title' => 'Machine Management',
             'page_title' => 'Machine List',
-            'machines'=> $this->MachineModel->select('machine.*,brand.brand')->join('brand','brand.id
-            = machine.brand_id')->findAll(),
+            'machines'=> $this->MachineModel->select('machines.*,brands.brand')->join('brands','brands.id
+            = machines.brand_id')->findAll(),
         ];
         return view('machine/index', $data);
     }
