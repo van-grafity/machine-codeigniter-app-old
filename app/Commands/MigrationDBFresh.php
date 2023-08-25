@@ -63,29 +63,38 @@ class MigrationDBFresh extends BaseCommand
     public function run(array $params)
     {
         try {
+            CLI::write('Dropping All Table...', 'yellow');
             $db = Database::connect();
             
+            // Abaikan pemeriksaan foreign key
             $db->query('SET FOREIGN_KEY_CHECKS = 0');
 
             // Hapus semua tabel dari database
             $tables = $db->listTables();
+            
             foreach ($tables as $table) {
                 $db->query("DROP TABLE IF EXISTS `$table`");
             }
+            // $db->query("CREATE TABLE `migrations`");
 
+            CLI::wait(3, false);
+            CLI::write('DONE Dropping All Table...', 'green');
+            
+            CLI::wait(1, false);
+            CLI::write('Test', 'red');
+            
             // Kembalikan pemeriksaan foreign key
             $db->query('SET FOREIGN_KEY_CHECKS = 1');
 
             // Jalankan perintah untuk memigrasi database dari awal.
-            // $migration = $this->call('migrate');
+            CLI::wait(1, false);
+            command('migrate');
             
-            // dd($migration);
-            
-            
-            // $is_seeding = array_key_exists('seed', $params);
+            // CLI::wait(1, false);
+            // $is_seeding = array_key_exists('seed',$params);
             // if($is_seeding){
             //     CLI::newLine();
-            //     $this->call('db:seed', ['DatabaseSeeder']);
+            //     command('db:seed DatabaseSeeder');
             // }
 
         } catch (\Exception $e) {
