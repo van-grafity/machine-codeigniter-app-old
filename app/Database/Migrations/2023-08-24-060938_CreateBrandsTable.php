@@ -12,7 +12,7 @@ class CreateBrandsTable extends Migration
     {
         $this->forge->addField([
             'id' => [
-                'type' => 'bigint',
+                'type' => 'int',
                 'unsigned' => true,
                 'auto_increment' => true
             ],

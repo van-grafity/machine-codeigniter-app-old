@@ -4,19 +4,19 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreateLinesTable extends Migration
+class CreateLocationsTable extends Migration
 {
-    private $table = 'lines';
+    private $table = 'locations';
 
     public function up()
     {
         $this->forge->addField([
             'id' => [
-                'type' => 'bigint',
+                'type' => 'int',
                 'unsigned' => true,
                 'auto_increment' => true
             ],
-            'line' => [
+            'location' => [
                 'type' => 'varchar',
                 'constraint' => 255,
             ],
@@ -24,13 +24,8 @@ class CreateLinesTable extends Migration
                 'type' => 'varchar',
                 'constraint' => 255,
             ],
-            'building_id' => [
-                'type' => 'bigint',
-                'unsigned' => true,
-            ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('building_id', 'buildings', 'id', 'RESTRICT', 'RESTRICT');
         $this->forge->createTable($this->table);
     }
 

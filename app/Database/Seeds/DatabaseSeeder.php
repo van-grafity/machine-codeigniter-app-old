@@ -8,8 +8,7 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        $this->call('BrandTableSeeder');
-        $this->call('BuildingTableSeeder');
-        $this->call('LineTableSeeder');
+        $this->call('BrandsTableSeeder');
+        $this->call('LocationsTableSeeder');
     }
 }

@@ -4,7 +4,7 @@ namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
-class BrandTableSeeder extends Seeder
+class BrandsTableSeeder extends Seeder
 {
     private $table = 'brands';
 
