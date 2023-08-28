@@ -50,12 +50,12 @@ $routes->post('/machine/store', 'MachineController::store',['as' => 'machine-sto
 $routes->post('/machine/update', 'MachineController::update',['as' => 'machine-update']);
 
 
-$routes->get('/machine_type', 'Machine_TypeController::index',['as' => 'machine_type']);
-$routes->get('/machine_type/edit/(:num)', 'Machine_TypeController::edit/$1',['as' => 'machine_type-edit']);
-$routes->get('/machine_type/delete/(:num)', 'Machine_TypeController::delete/$1',['as' => 'machine_type-delete']);
-$routes->get('/machine_type/create', 'Machine_TypeController::create',['as' => 'machine_type-create']);
-$routes->post('/machine_type/store', 'Machine_TypeController::store',['as' => 'machine_type-store']);
-$routes->post('/machine_type/update', 'Machine_TypeController::update',['as' => 'machine_type-update']);
+$routes->get('/machine-type', 'MachineTypeController::index',['as' => 'machine-type']);
+$routes->get('/machine-type/edit/(:num)', 'MachineTypeController::edit/$1',['as' => 'machine-type-edit']);
+$routes->get('/machine-type/delete/(:num)', 'MachineTypeController::delete/$1',['as' => 'machine-type-delete']);
+$routes->get('/machine-type/create', 'MachineTypeController::create',['as' => 'machine-type-create']);
+$routes->post('/machine-type/store', 'MachineTypeController::store',['as' => 'machine-type-store']);
+$routes->post('/machine-type/update', 'MachineTypeController::update',['as' => 'machine-type-update']);
 
 
 $routes->get('/location', 'LocationController::index',['as' => 'location']);

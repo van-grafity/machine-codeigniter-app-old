@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Machine_TypeModel extends Model
+class MachineTypeModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'machine_types';

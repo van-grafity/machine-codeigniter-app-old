@@ -3,16 +3,16 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\Machine_TypeModel;
+use App\Models\MachineTypeModel;
 
 
-class Machine_TypeController extends BaseController
+class MachineTypeController extends BaseController
 {
-    protected $Machine_TypeModel;
+    protected $MachineTypeModel;
 
     public function __construct()
     {
-        $this->Machine_TypeModel = new Machine_TypeModel();
+        $this->MachineTypeModel = new MachineTypeModel();
     }
 
     public function index()
@@ -20,9 +20,9 @@ class Machine_TypeController extends BaseController
         $data = [ 
             'title' => 'Machine Type Management',
             'page_title' => 'Machine Type List',
-            'machine_types' => $this->Machine_TypeModel->findAll()
+            'machine_types' => $this->MachineTypeModel->findAll()
         ];
-        return view('machine_type/index', $data);
+        return view('machine-type/index', $data);
     }
 
     public function create()
@@ -32,7 +32,7 @@ class Machine_TypeController extends BaseController
             'page_title' => 'Create Machine Type',
         ];
 
-        return view('machine_type/create', $data);
+        return view('machine-type/create', $data);
     }
 
     public function store()
@@ -43,8 +43,8 @@ class Machine_TypeController extends BaseController
             'machine_type' => $machine_type,
         ];
 
-        $insert_machine_type = $this->Machine_TypeModel->insert($new_machine_type);
-        return redirect()->to('machine_type');
+        $insert_machine_type = $this->MachineTypeModel->insert($new_machine_type);
+        return redirect()->to('machine-type');
     }
     
     public function edit($machine_type_id)
@@ -52,9 +52,9 @@ class Machine_TypeController extends BaseController
         $data = [
             'title' => 'Machine Type Management',
             'page_title' => 'Edit Machine Type',
-            'machine_type' => $this->Machine_TypeModel->find($machine_type_id)
+            'machine_type' => $this->MachineTypeModel->find($machine_type_id)
         ];
-        return view('machine_type/edit', $data);
+        return view('machine-type/edit', $data);
     }
 
     public function update()
@@ -66,13 +66,13 @@ class Machine_TypeController extends BaseController
             'machine_type' => $machine_type,
         ];
 
-        $update_machine_type = $this->Machine_TypeModel->update($machine_type_id, $edit_machine_type);
-        return redirect()->to('machine_type');
+        $update_machine_type = $this->MachineTypeModel->update($machine_type_id, $edit_machine_type);
+        return redirect()->to('machine-type');
     }
 
     public function delete($machine_type_id)
     {
-        $this->Machine_TypeModel->delete($machine_type_id);
-        return redirect()->to('machine_type');
+        $this->MachineTypeModel->delete($machine_type_id);
+        return redirect()->to('machine-type');
     }
 }

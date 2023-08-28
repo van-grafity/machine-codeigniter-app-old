@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\MachineModel;
 use App\Models\BrandModel;
-use App\Models\Machine_TypeModel;
+use App\Models\MachineTypeModel;
 
 
 class MachineController extends BaseController
@@ -16,7 +16,7 @@ class MachineController extends BaseController
     {
         $this->MachineModel = new MachineModel();
         $this->BrandModel = new BrandModel();
-        $this->Machine_TypeModel = new Machine_TypeModel();
+        $this->MachineTypeModel = new MachineTypeModel();
     }
 
     public function index()
@@ -38,7 +38,7 @@ class MachineController extends BaseController
             'title' => 'Machine Management',
             'page_title' => 'Create List',
             'brands' => $this->BrandModel->findAll(),
-            'machine_types' => $this->Machine_TypeModel->findAll(),
+            'machine_types' => $this->MachineTypeModel->findAll(),
         ];
 
         return view('machine/create', $data);
@@ -69,7 +69,7 @@ class MachineController extends BaseController
             'page_title' => 'Edit Machine',
             'machine' => $this->MachineModel->find($machine_id),
             'brands' => $this->BrandModel->findAll(),
-            'machine_types' => $this->Machine_TypeModel->findAll(),
+            'machine_types' => $this->MachineTypeModel->findAll(),
         ];
         return view('machine/edit', $data);
     }

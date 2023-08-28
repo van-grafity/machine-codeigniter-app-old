@@ -138,7 +138,7 @@
     <!-- Page Script | Javascript Khusus di halaman tersebut -->
     <?= $this->renderSection('page_script'); ?>
 
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             /*** add active class and stay opened when selected ***/
             var url = window.location;
@@ -161,6 +161,32 @@
 
         $('.select2').on('select2:open', function (e) {
             document.querySelector('.select2-search__field').focus();
+        });
+    </script> -->
+
+    <script>
+        $(document).ready(function() {
+
+            $('.masterdata-datatable').DataTable({});
+
+
+            /*** add active class and stay opened when selected ***/
+            $(function () {
+                var url = window.location;
+                
+                // for single sidebar menu
+                $('ul.nav-sidebar a').filter(function () {
+                    return this.href == url;
+                }).addClass('active');
+
+                // for sidebar menu and treeview
+                $('ul.nav-treeview a').filter(function () {
+                    return this.href == url;
+                }).parentsUntil(".nav-sidebar > .nav-treeview")
+                    .css({'display': 'block'})
+                    .addClass('menu-open').prev('a')
+                    .addClass('active');
+            });
         });
     </script>
     
