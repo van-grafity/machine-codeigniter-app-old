@@ -24,7 +24,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Manage Machine Type</h3>
                             <div class="d-flex justify-content-end mb-1">
-                                <a href="<?= url_to('machine_type-create') ?>" class="btn btn-success mb-2"
+                                <a href="<?= url_to('machine-type-create') ?>" class="btn btn-success mb-2"
                                     id="btn_modal_create">Create</a>
                             </div>
                         </div>
@@ -44,9 +44,9 @@
                                         <td><?= $key + 1 ?></td>
                                         <td><?= $machine_type['machine_type'] ?></td>
                                         <td>
-                                            <a href="<?= url_to('machine_type-edit', $machine_type['id'])?>"
+                                            <a href="<?= url_to('machine-type-edit', $machine_type['id'])?>"
                                                 class="btn btn-primary btn-sm">Edit</a>
-                                            <a href="<?= url_to('machine_type-delete', $machine_type['id'])?>"
+                                            <a href="<?= url_to('machine-type-delete', $machine_type['id'])?>"
                                                 class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>

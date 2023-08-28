@@ -23,40 +23,37 @@
                     <div class="card">
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <form action="<?= url_to('machine_type-update')?>" method="POST">
+                            <form action="<?= url_to('machine-type-store')?>" method="POST">
                                 <?= csrf_field() ?>
-                                <input type="hidden" name="machine_type_id" value="<?= $machine_type['id'] ?>">
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12">
                                         <div class="form-group">
                                             <label for="machine_type">Machine Type</label>
                                             <input type="text" class="form-control" id="machine_type"
-                                                name="machine_type" value="<?= $machine_type['machine_type'] ?>"
-                                                required>
+                                                name="machine_type" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12 text-right">
-                                    <a href="<?= url_to('machine_type') ?>" type="button"
+                                    <a href="<?= url_to('machine-type') ?>" type="button"
                                         class="btn btn-secondary">Cancel</a>
-                                    <button type="submit" class="btn btn-primary" id="btn_submit">Update Machine
+                                    <button type="submit" class="btn btn-primary" id="btn_submit">Add Machine
                                         Type</button>
                                 </div>
                             </form>
                         </div>
+                        <!-- /.card-body -->
                     </div>
-                    <!-- /.card-body -->
-                </div>
-                <!-- /.card -->
+                    <!-- /.card -->
 
+                </div>
+                <!-- /.col -->
             </div>
-            <!-- /.col -->
+            <!-- /.row -->
         </div>
-        <!-- /.row -->
-</div>
-<!-- /.container-fluid -->
-</section>
-<!-- /.content -->
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
 
 </div>
 
