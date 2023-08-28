@@ -30,7 +30,7 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="brand_table" class="table table-bordered table-hover">
+                            <table id="brand_table" class="table table-bordered table-hover masterdata-datatable">
                                 <thead>
                                     <tr>
                                         <th>No</th>
