@@ -166,6 +166,10 @@
 
     <script>
         $(document).ready(function() {
+
+            $('.masterdata-datatable').DataTable({});
+
+
             /*** add active class and stay opened when selected ***/
             $(function () {
                 var url = window.location;
