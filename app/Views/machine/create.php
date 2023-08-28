@@ -28,9 +28,15 @@
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12">
                                         <div class="form-group">
-                                            <label for="kind_of_machine">Kind Of Machine</label>
-                                            <input type="text" class="form-control" id="kind_of_machine"
-                                                name="kind_of_machine" required>
+                                            <label for="machine_type">Machine Type</label>
+                                            <select id="machine_type" name="machine_type" class="form-control">
+                                                <option value=""></option>
+                                                <?php foreach ($machine_types as $key => $machine_type) : ?>
+                                                <option value="<?= $machine_type['id']; ?>">
+                                                    <?= $machine_type['machine_type']; ?>
+                                                </option>
+                                                <?php endforeach ?>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label> Brand </label>
@@ -46,15 +52,9 @@
                                         <div class="form-group">
                                             <label for="model">Model</label>
                                             <input type="text" class="form-control" id="model" name="model" required>
-                                            <div class="form-group">
-                                                <label for="serial">Serial</label">
-                                                    <input type="text" class="form-control" id="serial" name="serial"
-                                                        required>
-                                                    <div class="form-group">
-                                                        <label for="qty">QTY</label>
-                                                        <input type="number" class="form-control" id="qty" name="qty"
-                                                            required>
-                                                    </div>
+                                        <div class="form-group">
+                                            <label for="serial_number">Serial Number</label">
+                                            <input type="text" class="form-control" id="serial_number" name="serial_number" required>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-12 text-right">

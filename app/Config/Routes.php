@@ -49,6 +49,15 @@ $routes->get('/machine/create', 'MachineController::create',['as' => 'machine-cr
 $routes->post('/machine/store', 'MachineController::store',['as' => 'machine-store']);
 $routes->post('/machine/update', 'MachineController::update',['as' => 'machine-update']);
 
+
+$routes->get('/machine_type', 'Machine_TypeController::index',['as' => 'machine_type']);
+$routes->get('/machine_type/edit/(:num)', 'Machine_TypeController::edit/$1',['as' => 'machine_type-edit']);
+$routes->get('/machine_type/delete/(:num)', 'Machine_TypeController::delete/$1',['as' => 'machine_type-delete']);
+$routes->get('/machine_type/create', 'Machine_TypeController::create',['as' => 'machine_type-create']);
+$routes->post('/machine_type/store', 'Machine_TypeController::store',['as' => 'machine_type-store']);
+$routes->post('/machine_type/update', 'Machine_TypeController::update',['as' => 'machine_type-update']);
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

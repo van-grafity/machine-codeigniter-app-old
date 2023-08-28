@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MachineModel extends Model
+class Machine_TypeModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'machines';
+    protected $table            = 'machine_types';
     protected $primarykey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['machine_type_id', 'brand_id', 'model', 'serial_number'];
+    protected $allowedFields    = ['machine_type'];
 
     //Dates
     protected $useTimestamps = false;

@@ -1,6 +1,6 @@
 <?= $this->extend('layouts/template'); ?>
 
-<?= $this->Section('content'); ?>
+<?= $this->Section('content');?>
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -22,37 +22,31 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Manage Machine</h3>
+                            <h3 class="card-title">Manage Machine Type</h3>
                             <div class="d-flex justify-content-end mb-1">
-                                <a href="<?= url_to('machine-create') ?>" class="btn btn-success mb-2"
+                                <a href="<?= url_to('machine_type-create') ?>" class="btn btn-success mb-2"
                                     id="btn_modal_create">Create</a>
                             </div>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="machine_table" class="table table-bordered table-hover">
+                            <table id="machine_type_table" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
                                         <th>No</th>
                                         <th>Machine Type</th>
-                                        <th width="150">Brand</th>
-                                        <th width="150">Model</th>
-                                        <th width="150">Serial Number</th>
                                         <th width="150">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($machines as $key => $machine) : ?>
+                                    <?php foreach ($machine_types as $key => $machine_type) : ?>
                                     <tr>
                                         <td><?= $key + 1 ?></td>
-                                        <td><?= $machine['machine_type'] ?></td>
-                                        <td><?= $machine['brand'] ?></td>
-                                        <td><?= $machine['model'] ?></td>
-                                        <td><?= $machine['serial_number'] ?></td>
+                                        <td><?= $machine_type['machine_type'] ?></td>
                                         <td>
-                                            <a href="<?= url_to('machine-edit', $machine['id'])?>"
+                                            <a href="<?= url_to('machine_type-edit', $machine_type['id'])?>"
                                                 class="btn btn-primary btn-sm">Edit</a>
-                                            <a href="<?= url_to('machine-delete', $machine['id'])?>"
+                                            <a href="<?= url_to('machine_type-delete', $machine_type['id'])?>"
                                                 class="btn btn-danger btn-sm">Delete</a>
                                         </td>
                                     </tr>

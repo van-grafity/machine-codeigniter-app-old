@@ -34,6 +34,12 @@
                         <p>Machine</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?= url_to('machine_type') ?>" class="nav-link">
+                        <i class="fas fa-radiation nav-icon"></i>
+                        <p>Machine Type</p>
+                    </a>
+                </li>
 
             </ul>
         </nav>
