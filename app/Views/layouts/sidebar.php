@@ -40,6 +40,12 @@
                         <p>Machine Type</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="<?= url_to('location') ?>" class="nav-link">
+                        <i class="fas fa-location-arrow nav-icon"></i>
+                        <p>Location</p>
+                    </a>
+                </li>
 
             </ul>
         </nav>

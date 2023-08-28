@@ -58,6 +58,14 @@ $routes->post('/machine_type/store', 'Machine_TypeController::store',['as' => 'm
 $routes->post('/machine_type/update', 'Machine_TypeController::update',['as' => 'machine_type-update']);
 
 
+$routes->get('/location', 'LocationController::index',['as' => 'location']);
+$routes->get('/location/edit/(:num)', 'LocationController::edit/$1',['as' => 'location-edit']);
+$routes->get('/location/delete/(:num)', 'LocationController::delete/$1',['as' => 'location-delete']);
+$routes->get('/location/create', 'LocationController::create',['as' => 'location-create']);
+$routes->post('location/store', 'LocationController::store',['as' => 'location-store']);
+$routes->post('/location/update', 'LocationController::update',['as' => 'location-update']);
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
