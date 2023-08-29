@@ -33,7 +33,7 @@ class BrandsTableSeeder extends Seeder
             ],
             [
                 'id' => 6,
-                'brand' => 'Stobel',
+                'brand' => 'Strobel',
             ],
             [
                 'id' => 7,
