@@ -46,6 +46,7 @@
     
     <!-- Custom App CSS -->
     <link rel="stylesheet" href="<?= base_url(''); ?>css/app.css">
+    <link rel="stylesheet" href="<?= base_url(''); ?>css/machine-app.css">
 
     <?= $this->renderSection('page_css'); ?>
 

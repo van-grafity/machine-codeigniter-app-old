@@ -21,8 +21,11 @@ class MachineController extends BaseController
 
     public function index()
     {   
-        $machines = $this->MachineModel->select('machines.*,machine_types.machine_type,brands.brand')->join('machine_types','machine_types.id
-            = machines.machine_type_id')->join('brands','brands.id = machines.brand_id')->findAll();
+        $machines = $this->MachineModel->select('machines.*,machine_types.machine_type,brands.brand')
+            ->join('machine_types','machine_types.id = machines.machine_type_id')
+            ->join('brands','brands.id = machines.brand_id')
+            ->orderBy('machines.id','ASC')
+            ->findAll();
 
         $data = [
             'title' => 'Machine Management',
@@ -36,7 +39,7 @@ class MachineController extends BaseController
     {
         $data = [
             'title' => 'Machine Management',
-            'page_title' => 'Create List',
+            'page_title' => 'Add New Machine',
             'brands' => $this->BrandModel->findAll(),
             'machine_types' => $this->MachineTypeModel->findAll(),
         ];
