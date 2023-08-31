@@ -23,7 +23,6 @@
                     </a>
                 </li>
                 
-                
 
                 <li class="nav-item has-treeview">
                     <a href="" class="nav-link">
@@ -33,19 +32,13 @@
                     <ul class="nav nav-treeview pl-3">
                         <li class="nav-item">
                             <a href="<?= url_to('brand') ?>" class="nav-link">
-                                <i class="fas fa-cube nav-icon"></i>
+                                <i class="fas fa-registered nav-icon"></i>
                                 <p>Brand</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= url_to('machine') ?>" class="nav-link">
-                                <i class="fas fa-cubes nav-icon"></i>
-                                <p>Machine</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="<?= url_to('machine-type') ?>" class="nav-link">
-                                <i class="fas fa-radiation nav-icon"></i>
+                                <i class="far fa-list-alt nav-icon"></i>
                                 <p>Machine Type</p>
                             </a>
                         </li>
@@ -55,10 +48,15 @@
                                 <p>Location</p>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a href="<?= url_to('machine') ?>" class="nav-link">
+                                <i class="fas fa-satellite nav-icon"></i>
+                                <p>Machine</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
-                
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
