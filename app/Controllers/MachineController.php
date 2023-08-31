@@ -39,7 +39,7 @@ class MachineController extends BaseController
     {
         $data = [
             'title' => 'Machine Management',
-            'page_title' => 'Create List',
+            'page_title' => 'Add New Machine',
             'brands' => $this->BrandModel->findAll(),
             'machine_types' => $this->MachineTypeModel->findAll(),
         ];

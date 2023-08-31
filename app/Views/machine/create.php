@@ -52,17 +52,18 @@
                                         <div class="form-group">
                                             <label for="model">Model</label>
                                             <input type="text" class="form-control" id="model" name="model" required>
-                                        <div class="form-group">
-                                            <label for="serial_number">Serial Number</label">
-                                            <input type="text" class="form-control" id="serial_number" name="serial_number" required>
-                                            </div>
                                         </div>
-                                        <div class="col-md-6 col-sm-12 text-right">
-                                            <a href="<?= url_to('machine') ?>" type="button"
-                                                class="btn btn-secondary">Cancel</a>
+                                        <div class="form-group">
+                                            <label for="serial_number">Serial Number</label>
+                                            <input type="text" class="form-control" id="serial_number" name="serial_number" required>
+                                        </div>
+                                        <div class="text-right">
+                                            <a href="<?= url_to('machine') ?>" type="button" class="btn btn-secondary">Cancel</a>
                                             <button type="submit" class="btn btn-primary" id="btn_submit">Add
                                                 Machine</button>
                                         </div>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                         <!-- /.card-body -->
