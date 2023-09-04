@@ -54,6 +54,12 @@
                                 <p>Machine</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?= url_to('machine_location') ?>" class="nav-link">
+                                <i class="fas fa-map-marker-alt nav-icon"></i>
+                                <p>Machine Location</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

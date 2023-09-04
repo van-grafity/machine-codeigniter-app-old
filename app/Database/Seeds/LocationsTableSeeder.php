@@ -170,6 +170,21 @@ class LocationsTableSeeder extends Seeder
                 'location' => 'B16',
                 'description' => 'Sewing Line#16 Factory B',
             ],
+            [
+                'id' => 33,
+                'location' => 'Offline A',
+                'description' => 'Offline Factory A',
+            ],
+            [
+                'id' => 34,
+                'location' => 'Offline B',
+                'description' => 'Offline Factory B',
+            ],
+            [
+                'id' => 35,
+                'location' => 'Warehouse',
+                'description' => 'Warehouse',
+            ],
         ];
         $this->db->table($this->table)->insertBatch($data);
     }

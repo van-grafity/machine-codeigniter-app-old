@@ -28,7 +28,7 @@ class BrandController extends BaseController
     {
         $data = [
             'title' => 'Brand Management',
-            'page_title' => 'Create Brand List',
+            'page_title' => 'Create Brand',
         ];
 
         return view('brand/create', $data);
