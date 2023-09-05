@@ -54,6 +54,8 @@
                                                 class="btn btn-primary btn-sm">Edit</a>
                                             <a href="<?= url_to('machine-delete', $machine['id'])?>"
                                                 class="btn btn-danger btn-sm">Delete</a>
+                                            <a href="http://localhost/cutting-ticket-app/public/machine/print/<?= $machine['serial_number'] ?>"
+                                                class="btn btn-success btn-sm">QR</a>
                                         </td>
                                     </tr>
                                     <?php endforeach ?>
