@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <a href="<?= url_to('dashboard') ?>" type="button" class="btn btn-primary shadow-2 mb-4">Login</a>
+            <a href="<?= url_to('dashboard') ?>" type="button" class="btn btn-primary shadow-2 mb-4 text-white">Login</a>
             <!-- <button class="btn btn-primary shadow-2 mb-4">Login</button> -->
         </form>
 
