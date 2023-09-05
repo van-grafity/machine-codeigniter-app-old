@@ -35,7 +35,8 @@
                 </div>
             </div>
 
-            <button class="btn btn-primary shadow-2 mb-4">Login</button>
+            <a href="<?= url_to('dashboard') ?>" type="button" class="btn btn-primary shadow-2 mb-4">Login</a>
+            <!-- <button class="btn btn-primary shadow-2 mb-4">Login</button> -->
         </form>
 
         <!-- <p class="mb-2 text-muted"><a href="<?= site_url('forgot-password'); ?>"><?= lang('Forgot Your Password') ?></a></p> -->
