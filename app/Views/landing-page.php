@@ -29,7 +29,7 @@
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Machine App</h1>
-                        <h2 class="text-white mx-auto mt-2 mb-5">Application for Packing Department</h2>
+                        <h2 class="text-white mx-auto mt-2 mb-5">Application for Mechanic Department</h2>
                         
                         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             <?php if((session()->get('logged_in'))): ?>
