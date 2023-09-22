@@ -45,7 +45,6 @@
     <link rel="stylesheet" href="<?= base_url('assets'); ?>/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     
     <!-- Custom App CSS -->
-    <link rel="stylesheet" href="<?= base_url(''); ?>css/app.css">
     <link rel="stylesheet" href="<?= base_url(''); ?>css/machine-app.css">
 
     <?= $this->renderSection('page_css'); ?>
@@ -133,7 +132,7 @@
     
     
     <!-- Custom App JS -->
-    <script src="<?= base_url(''); ?>/js/app.js"></script>
+    <script src="<?= base_url(''); ?>js/machine-app.js"></script>
 
 
     <!-- Page Script | Javascript Khusus di halaman tersebut -->
