@@ -36,6 +36,10 @@ $routes->get('/', function(){
 $routes->get('/home', 'HomeController::index',['as' => 'home']);
 $routes->get('/login', 'LoginController::index',['as' => 'login']);
 
+$routes->group('api', function($routes){
+    $routes->resource('machine', ['controller' => 'MachineAPIController']);
+});
+
 // =>default controller
 $routes->get('/dashboard', 'DashboardController::index',['as' => 'dashboard']);
 
