@@ -33,7 +33,7 @@
                         
                         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             <?php if((session()->get('logged_in'))): ?>
-                                <a href="<?= base_url('home')?>" class="btn login text-white bg-primary bg-opacity-100" style="font-size:14px;">Home</a>
+                                <a href="<?= base_url('dashboard')?>" class="btn login text-white bg-primary bg-opacity-100" style="font-size:14px;">Home</a>
                             <?php else:  ?>
                                 <a href="<?= base_url('login')?>" class="btn login text-white bg-primary bg-opacity-100" style="font-size:14px;">Log in</a>
                             <?php endif  ?>

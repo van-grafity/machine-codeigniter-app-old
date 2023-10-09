@@ -34,7 +34,6 @@ $routes->get('/', function(){
 });
 
 $routes->get('/home', 'HomeController::index',['as' => 'home']);
-$routes->get('/login', 'LoginController::index',['as' => 'login']);
 
 $routes->group('api', function($routes){
     $routes->resource('machine', ['controller' => 'MachineAPIController']);
@@ -43,7 +42,17 @@ $routes->group('api', function($routes){
 // =>default controller
 $routes->get('/dashboard', 'DashboardController::index',['as' => 'dashboard']);
 
-$routes->get('/brand', 'BrandController::index',['as' => 'brand']);
+// $routes->get('/brand', 'BrandController::index',['as' => 'brand']);
+// INSERT INTO `auth_groups` (`id`, `name`, `description`) VALUES (NULL, 'administrator', 'Administrator'), (NULL, 'user', 'User');
+// get brand using myth auth admin only
+$routes->group('brand', ['filter' => 'role:administrator'], function($routes){
+    $routes->get('/', 'BrandController::index',['as' => 'brand','filter' => 'permission:user']);
+    $routes->get('edit/(:num)', 'BrandController::edit/$1',['as' => 'brand-edit']);
+    $routes->get('delete/(:num)', 'BrandController::delete/$1',['as' => 'brand-delete']);
+    $routes->get('create', 'BrandController::create',['as' => 'brand-create']);
+    $routes->post('store', 'BrandController::store',['as' => 'brand-store']);
+    $routes->post('update', 'BrandController::update',['as' => 'brand-update']);
+});
 $routes->get('/brand/edit/(:num)', 'BrandController::edit/$1',['as' => 'brand-edit']);
 $routes->get('/brand/delete/(:num)', 'BrandController::delete/$1',['as' => 'brand-delete']);
 $routes->get('/brand/create', 'BrandController::create',['as' => 'brand-create']);
