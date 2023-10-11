@@ -82,7 +82,7 @@ $routes->get('/machine_location/create', 'MachineLocationController::create',['a
 $routes->post('/machine_location/store', 'MachineLocationController::store',['as' => 'machine_location-store']);
 $routes->post('/machine_location/update', 'MachineLocationController::update',['as' => 'machine_location-update']);
 
-
+$routes->get('/repair_request', 'ReportController::repair_request',['as' => 'repair_request']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

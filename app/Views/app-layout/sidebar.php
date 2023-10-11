@@ -63,6 +63,21 @@
                     </ul>
                 </li>
 
+                <li class="nav-item has-treeview">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <p>Report <i class="fas fa-angle-left right"></i></p>
+                    </a>
+                    <ul class="nav nav-treeview pl-3">
+                        <li class="nav-item">
+                            <a href="<?= url_to('repair_request') ?>" class="nav-link">
+                                <i class="fas fa-file-pdf nav-icon"></i>
+                                <p>Report</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
