@@ -18,7 +18,6 @@
         .table-machine-equipment td, .table-machine-equipment th {
           padding: 0.25rem 0.25rem;
           font-size: 7pt;
-          /* text-align:center; */
           vertical-align:middle;
         }
 
@@ -46,36 +45,24 @@
             text-align: right;
             font-size: 12px;
         }
-        .table-machine-equipment {
-            border: 2px solid;
-        }
 
-        .table-machine-equipment thead th {
-            border: 1px solid;
-            vertical-align: middle;
-            text-align: center;
-            font-size: 7pt;
-            margin: 0px !important;
-            padding: 0px !important;
+        .hello-table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 0 !important;
         }
-        .table-machine-equipment tbody td {
-            border: 1px solid;
-            vertical-align: middle;
-            text-align: center;
-            font-weight: bold;
-            font-size:6pt;
-            padding-top: 1.5 !important;
-            padding-bottom: 1.5 !important;
-            padding-left: 0.3 !important;
-            padding-right: 0.3 !important;
-            white-space: nowrap;
+        .hello-table td, .hello-table th {
+            border: 1px solid black;
+            padding: 2px;
+            font-size: 13px;
+            text-align: left;
         }
         
 	</style>
 </head>  
 
 <body>
-    <div class="">
+    <div>
         <div class="header-main">
             <div class="company-name">
                 PT. GHIMLI INDONESIA
@@ -92,23 +79,51 @@
 
         </div>
 
-        <div class="body-nota">
-            <table class="table-machine-equipment">
-                <thead class="">
-                    <tr>
-                        <th style="width: 5%;">No</th>
-                        <th style="width: 15%;">Machine</th>
-                        <th style="width: 15%;">Brand</th>
-                        <th style="width: 15%;">Type</th>
-                        <th style="width: 15%;">Location</th>
-                        <th style="width: 15%;">Problem</th>
-                        <th style="width: 15%;">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>
+        <table width="100%">
+            <tr>
+                <td width="5%">EQUIPMENT NAME</td>
+                <td width="1.5%">:</td>
+                <td style="text-align: left;">COVERSEAM</td>
+            </tr>
+            <tr>
+                <td width="11%">MODEL</td>
+                <td width="1.5%">:</td>
+                <td style="text-align: left;"></td>
+            </tr>
+            <tr>
+                <td>MACHINE NO </td>
+                <td width="1.5%">:</td>
+                <td style="text-align: left;"></td>
+            </tr>
+        </table>
+
+        <table width="100%" class="hello-table">
+            <thead class="">
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3" colspan="2">MECHANIC RECORD</td>
+                    <td rowspan="3" colspan="1">FREQUENCY</br>DAILY</td>
+                    <td rowspan="1" colspan="1">YEARLY</td>
+                </tr>
+                <tr>
+                    <td rowspan="1" colspan="1">MONTHLY</td>
+                </tr>
+                <tr>
+                    <td rowspan="1" colspan="1">WEEKLY</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" colspan="1">CHECKING POINT</td>
+                    <td colspan="2">Clean the lint on the feed dog</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Check if there has enough liquid oil inside the oil pan</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 
